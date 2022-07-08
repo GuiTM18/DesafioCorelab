@@ -22,9 +22,4 @@ export class Cars{
     })
     finished: boolean;
  
-    @CreateDateColumn()
-    create_at: Date;
- 
-    @UpdateDateColumn()
-    updated_at: Date;
 }
