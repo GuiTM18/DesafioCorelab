@@ -1,10 +1,13 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
  
 @Entity()
-export class Cars{
+export class Car{
     @PrimaryGeneratedColumn()
     id: number;
  
+    @Column()
+    nome: string;
+
     @Column()
     marca: string;
 
@@ -13,6 +16,9 @@ export class Cars{
 
     @Column()
     cor: string;
+
+    @Column()
+    ano: number;
 
     @Column()
     description: string;
