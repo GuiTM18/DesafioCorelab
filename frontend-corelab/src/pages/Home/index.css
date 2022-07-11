@@ -30,12 +30,25 @@
     left: 1%;
     
   }
+  #btnAdc{
+    font-size: 100%;
+    font-weight: bold;
+    position: absolute;
+    top: 150%;
+    left: 55%;
+    width: 35%;
+    height: 80%;
+    background: rgba(101, 220, 199, 0.8);
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+  }
   #btnBusca{
     font-size: 100%;
     font-weight: bold;
     position: absolute;
     top: 150%;
-    left: 32%;
+    left: 15%;
     width: 35%;
     height: 80%;
     background: rgba(101, 220, 199, 0.8);
@@ -47,4 +60,11 @@
     position: absolute;
     left: 100%;
     cursor: pointer;
+  }
+
+#anuncio{
+  position: absolute;
+  left: 112%;
+  cursor: pointer;
+  width: 6.5%;
   }

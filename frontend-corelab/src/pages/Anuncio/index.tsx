@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../Anuncio/index.css'
 import './index.css'
 import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header'
@@ -8,7 +7,9 @@ import api from '../../services/api'
 
 import search from './searchh.png'
 import image from './image.png'
-import ads from './anuncio.png'
+import imgedit from './image 3.png'
+import x from './Box.png'
+import heart from './Path.png'
 
 interface ICar{
 
@@ -22,7 +23,7 @@ interface ICar{
   finished: boolean;
 }
 
-const Vehicles: React.FC = () => {
+const Anuncio: React.FC = () => {
 
 
 const [cars, setCars] = useState<ICar[]>([])
@@ -59,10 +60,6 @@ function editTask(id: number){
   history.push(`/adicionar/${id}`)
 }
 
-function newAds(){
-  history.push('/anuncio')
-}
-
 
     return(
         <div>
@@ -72,18 +69,21 @@ function newAds(){
             <img id='foto'src={search} alt="Buscar..."/>
             <input type="text" id="txtBusca" placeholder="Buscar..."/>
             <img id='filter' onClick={newFilter} src={image} alt="filter" />
-            <img id='anuncio' onClick={newAds} src={ads} alt="Meus Anúncios" />
             <button id="btnAdc" onClick={newTask}>ADICIONAR</button>
             <button id="btnBusca" onClick={newSearch}>PROCURAR</button>
             
           </div>
 
           <table>
-          
+            <h2 id='pos'>Meus anúncios</h2>
               <tbody>
                   {
                       cars.map(car => (
                         <tr>
+                          <p id='x'>X</p>
+                          <img id='group'src={heart} />
+                          <img id='edit'src={imgedit} onClick={() => editTask(car.id)}/>
+                          
 
                           <td>{car.nome} {car.marca}</td> 
                           <br />
@@ -108,4 +108,4 @@ function newAds(){
     ) 
 }
  
-export default Vehicles;
+export default Anuncio;
